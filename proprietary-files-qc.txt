@@ -37,25 +37,22 @@ etc/firmware/venus.mdt
 # DRM
 bin/qseecomd
 lib/libQSEEComAPI.so:vendor/lib/libQSEEComAPI.so
+lib/libdrmdecrypt.so
 vendor/lib/libdrmdiag.so
 vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so
 vendor/lib/librpmb.so
 vendor/lib/libssd.so
-vendor/lib/libsecureui.so
-vendor/lib/lib-sec-disp.so
-vendor/lib/libStDrvInt.so
--vendor/lib/libwvdrm_L3.so
--vendor/lib/libwvm.so
--vendor/lib/libWVStreamControlAPI_L3.so
--vendor/lib/mediadrm/libwvdrmengine.so
+vendor/lib/libwvdrm_L3.so
+vendor/lib/libwvm.so
+vendor/lib/libWVStreamControlAPI_L3.so
+vendor/lib/drm/libdrmwvmplugin.so
+vendor/lib/mediadrm/libwvdrmengine.so
 
 # GPS
--app/com.qualcomm.location.apk
 bin/gsiff_daemon
 bin/quipc_igsn
 bin/quipc_main
-etc/permissions/com.qualcomm.location.xml
 lib/libloc_api_v02.so
 lib/libloc_ds_api.so
 vendor/lib/hw/flp.default.so
@@ -108,7 +105,6 @@ vendor/lib/libOmxWmaDec.so
 vendor/lib/libSHIMDivxDrm.so
 
 # Postprocessing
--app/PPPreference.apk
 bin/mm-pp-daemon
 vendor/lib/libdisp-aba.so
 -vendor/lib/libmm-abl.so

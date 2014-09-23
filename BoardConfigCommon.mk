@@ -58,7 +58,6 @@ TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 TARGET_QCOM_AUDIO_VARIANT := caf
 TARGET_QCOM_DISPLAY_VARIANT := caf-new
 TARGET_QCOM_MEDIA_VARIANT := caf-new
-TARGET_DISPLAY_USE_RETIRE_FENCE := true
 
 # Simple time service client
 ifeq ($(QCPATH),)
@@ -164,7 +163,9 @@ TARGET_PROVIDES_GPS_LOC_API := true
 TARGET_HW_DISK_ENCRYPTION := true
 
 # Enable CNE
-#BOARD_USES_QCNE := true
+ifneq ($(QCPATH),)
+BOARD_USES_QCNE := true
+endif
 
 # Added to indicate that protobuf-c is supported in this build
 PROTOBUF_SUPPORTED := true
